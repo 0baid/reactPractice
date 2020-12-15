@@ -17,22 +17,31 @@ function Cards() {
                         />
                         <CardItem 
                         src='./images/img-2.jpg'
-                        text='Relax on the beaches of ibiza or where ever this is'
+                        text='Watch the sunset from the mountains'
+                        label='Adventure'
+                        path='/Services'
+                        />
+                         <CardItem 
+                        src='./images/img-home.jpg'
+                        text='Watch the sunset from the mountains'
+                        label='Adventure'
+                        path='/Services'
+                        />
+                    </ul>
+                    <ul className='cards__items'>
+                        <CardItem 
+                        src='./images/img-3.jpg'
+                        text='Watch the sunset from the mountains'
                         label='Adventure'
                         path='/Services'
                         />
                         <CardItem 
                         src='./images/img-4.jpg'
-                        text='I dont even know whats going on in this one'
+                        text='Watch the sunset from the mountains'
                         label='Adventure'
                         path='/Services'
                         />
-                        <CardItem 
-                        src='./images/img-home.jpg'
-                        text='Here is a big rock in the ocean'
-                        label='Adventure'
-                        path='/Services'
-                        />
+                       
                     </ul>
                 </div>
             </div>
