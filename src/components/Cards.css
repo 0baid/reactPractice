@@ -19,10 +19,12 @@
   .cards__wrapper {
     position: relative;
     margin: 50px 0 45px;
+    padding: 1.2rem 1rem;
   }
   
   .cards__items {
     margin-bottom: 24px;
+    width: 100%;
   }
   
   .cards__item {

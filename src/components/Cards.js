@@ -1,7 +1,7 @@
 import React from 'react'
 import CardItem from './CardItem'
 import './Cards.css';
-import Carddata from './components/Carddata';
+import Carddata from './Carddata';
 function Cards() {
     return (
         <div className='cards'>
