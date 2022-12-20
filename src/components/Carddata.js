@@ -29,6 +29,11 @@ const Carddata = [
     text: 'Watch the sunset from the mountains',
     label: 'Adventure',
     path: '/Services',
+},{
+    imgsrc : img5,
+    text: 'Watch the sunset from the mountains',
+    label: 'Adventure',
+    path: '/Services',
 }
 ]
 export default Carddata;
