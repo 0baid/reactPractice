@@ -7,7 +7,6 @@ function Navbar() {
     const [click , setClick] = useState(false);
     const [button, setButton] = useState(true);
 
-
     const handleClick = () =>setClick(!click);
     const closeMobileMenu = () =>setClick(false);
 
@@ -19,10 +18,7 @@ function Navbar() {
             setButton(true);
         }
     };
-
     window.addEventListener('resize', showButton);
-
-
     return (
         <>
             <nav className='navbar'>
@@ -47,6 +43,11 @@ function Navbar() {
                         <li className = 'nav-item'>
                             <Link to='/contact' className="nav-links" onClick={closeMobileMenu}>
                                 Contact
+                            </Link>
+                        </li>
+                        <li className = 'nav-item'>
+                            <Link to='/Todolist' className="nav-links" onClick={closeMobileMenu}>
+                                Todo
                             </Link>
                         </li>
                     </ul>
