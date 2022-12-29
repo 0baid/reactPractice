@@ -2,6 +2,36 @@
   margin: 0;
   padding: 0;
 }
+.edit{
+  color: red;
+  margin-top: 0.2rem;
+  margin-left: 0rem;
+}
+.cross{
+  color: red;
+  margin-top: 0.2rem;
+  display: flex;
+  justify-content: left;
+  width: 30px;
+}
+.crosstext{
+max-width: 90%;
+color: red;
+background-color: aqua;
+padding-top: 1px;
+margin-right: 2px;
+font-size: 25px;
+color: black;
+background-color: white;
+border: 1px solid #0d0d8b;
+border-radius: 11px;
+display: flex;
+margin-top: 0.1rem;
+}
+.text{
+color: blue;
+font-size: 30px;
+}
 .container{
   background-color: white;
   width: 100%;

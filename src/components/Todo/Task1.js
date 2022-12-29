@@ -1,49 +1,72 @@
 
-import React from 'react'
-import Deletetask from './Delletetask';
-const Task1 = ({input,setInput,todo,setTodo}) => {
+import React, { useState } from 'react'
+import {TiDelete} from 'react-icons/ti';
+import {BiEditAlt} from 'react-icons/bi';
+// import Deletetask from './Delletetask';
+// // import Deletetask from './Delletetask';
+
+import './Todolist.css';
+const Task1 = () => {
+  const [input, setInput]=useState("");
+  const[todo, setTodo]=useState([]);
+  const [edit, setEdit]=useState([]);
+  const [toggile, setToggle] = useState(true);
+ 
   const eventitem =(event )=>{ 
     setInput(event.target.value);
   }
-  const itemstor=(e)=>{
+  const itemstore=(e)=>{
     e.preventDefault();
-    setTodo((todoitem)=>{
-      return [...todoitem,input];
-    });
-   setInput("");
+    setTodo((oldarr)=> {
+    return [...oldarr, input]
+     })
+     setInput("")
   }
-  const deleteitem=(a)=>{
-    setTodo((todoitem)=>{
-      return todoitem.filter((arrele,index)=>{
-        return index!==a;
-      })})
-    }
+
+const deleteItem =(index)=>{
+  const newitem=[...todo]
+  newitem.splice(index,1);
+  setTodo(newitem);
+}
+
+  
+    const Edititem=(id)=>{
+      const edits = todo.find(task => task.id===id)
+        setEdit(edits);
+       setInput(edit);
+       setToggle(false);
+       
+      }
+    
   return (
     <>
       <form>
         <input type="text" placeholder= " enter a task" className='task-input'  value={input}
-        onChange={eventitem}
-        />
-        <button className='button-add'  onClick={itemstor}> Add</button>
-        <ul >
-      {
-         todo.map((item,index)=>{
-          return   <Deletetask
-          key={index}
-          id={index}
-          onSelect={deleteitem}
-          text = {item}
-          />
-        })
-        
-      }
-    
-        
-        </ul>
+        onChange={eventitem}/>
+        { toggile ? <button onClick={itemstore}> Add  </button>
+        : <i><button className='edit' 
+         onClick={ itemstore}
+          >EDIT </button></i>
+                }
+                        
       </form> 
-      
-      </>
-
+      <div>
+      {
+          todo.map((val,index)=>{
+            return  <li   className='crosstext' key ={index}>{val} 
+            <BiEditAlt className='edit' 
+            key={index}
+            id={index}
+            onClick={()=> Edititem(val.id)}
+             /><TiDelete className=' cross'
+            
+            onClick={()=> deleteItem (index)}
+            /> 
+            </li> ;
+          })
+        }
+      </div>
+    </>
   )
 }
 export default Task1
