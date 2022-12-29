@@ -8,7 +8,6 @@ const Todolist =() => {
   return (
     <div className='container'>
     <div className='app-wrapper'>
-     
     <Task1/>
     </div>
  
