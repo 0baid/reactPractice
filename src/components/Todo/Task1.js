@@ -29,7 +29,6 @@ const deleteItem =(index)=>{
   setTodo(newitem);
 }
 
-  
     const Edititem=(id)=>{
       const edits = todo.find(task => task.id===id)
         setEdit(edits);
