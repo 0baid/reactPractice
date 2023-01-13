@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom';
 import { Button } from './Button';
 import './Navbar.css';
 
-function Navbar() {
+function Navbar(props) {
     const [click , setClick] = useState(false);
     const [button, setButton] = useState(true);
 
@@ -34,6 +34,11 @@ function Navbar() {
                         <i className= {click ? 'fas fa-times' : 'fas fa-bars'}/>
                     </div>
                     <ul className={click ? 'nav-menu active' : 'nav-menu'}>
+                    <li className = 'nav-item'>
+                            <div to='/' className="nav-links" onClick={() => props.setOpenModal(true)}>
+                                Open Modal
+                            </div>
+                        </li>
                         <li className = 'nav-item'>
                             <Link to='/' className="nav-links" onClick={closeMobileMenu}>
                                 Home
